@@ -1,8 +1,18 @@
+
+
+<input
+ (keyup.enter)="createPost(title)" #title
+type="text" class="form-control" placeholder="enter new post">
+
 <ul class="list-group">
   <li
   *ngFor="let post of posts"
   class="list-group-item">
-  {{ post .title }}
+  <button
+  (click)="updatePost(post)"
 
+  class="btn btn-info btn-sm float-right">Updade</button>
+
+  {{ post.title }}
   </li>
 </ul>
