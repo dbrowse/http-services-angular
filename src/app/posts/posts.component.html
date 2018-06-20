@@ -2,7 +2,7 @@
 
 <input
  (keyup.enter)="createPost(title)" #title
-type="text" class="form-control" placeholder="enter new post">
+type="text" class="form-control" placeholder="please, enter new post">
 
 <ul class="list-group">
   <li
@@ -12,6 +12,10 @@ type="text" class="form-control" placeholder="enter new post">
   (click)="updatePost(post)"
 
   class="btn btn-info btn-sm float-right">Updade</button>
+  <button
+  (click)="deletePost(post)"
+
+  class="btn btn-danger btn-sm float-right">Delete</button>
 
   {{ post.title }}
   </li>
