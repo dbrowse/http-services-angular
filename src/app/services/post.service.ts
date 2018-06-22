@@ -21,7 +21,8 @@ export class PostService {
    }
 
    getPost() {
-   return this.http.get(this.url);
+   return this.http.get(this.url)
+   .catch(this.handleError);
 
    }
 
